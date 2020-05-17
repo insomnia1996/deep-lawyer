@@ -1,0 +1,124 @@
+配置文件位置：/deep-lawyer/config.py
+useful pair = [2,3,7,8,11,12,13,16,18,22,23,24,25]
+
+小数据集：
+wordlist: 26883
+true_train: 115472 (Train:101685,Valid:12787)
+true_test:26766
+标准：训练集合+验证集  >= 100 次， 单词>= 25次 无二审字样, 所有word2vec均无预训练
+句长：64
+词长：64
+总长：512
+词对长：128
+Law number: 103
+Accu number: 119
+Term number : 11
+其余：等于liu
+
+数据文件位置、含义：
+词对：
+/deep-lawyer/data/generated/new_data_test/train_pair_front/last_:
+word: 是单词非数字（是为1，否为0）
+Num:数字序列序号
+id: 单词序号
+dig:是数字非单词
+输入:
+/deep-lawyer/data/generated/new_data_test/train_cuted_:
+singlefact: 全文单词序列，n*512
+fact: 全文分层单词序列， n*64*64
+输出标签：
+/deep-lawyer/data/generated/new_data_test/train_cuted_:
+time:刑期时间
+term:刑期种类
+law:推荐法律
+accu：所犯罪名
+原始数据：
+法律目录：/deep-lawyer/data/new_law.txt
+罪名目录：/deep-lawyer/data/new_accu.txt
+单词编号字典：/deep-lawyer/data/new_word2id.json
+原始训练集：/deep-lawyer/data/basic/small_data_train.json
+原始测试集：/deep-lawyer/data/basic/small_data_test.json
+原始验证集：/deep-lawyer/data/basic/small_data_valid.json
+去燥分词后训练集：/deep-lawyer/data/basic/new_data_train_cuted.json
+去燥分词后测试机：/deep-lawyer/data/basic/new_data_test_cuted.josn
+去燥原始词对训练集：/deep-lawyer/data/processed/new_data_train_pair_new.json
+去燥原始词对测试集：/deep-lawyer/data/processed/new_data_test_pair_new.json
+
+程序位置：
+/deep-lawyer/selfmodels.py:调试模型文件
+/deep-lawyer/train.py:调试训练文件
+/deep-lawyer/final_model.py:最终模型文件
+/deep-lawyer/final_train.py:最终训练文件
+/deep-lawyer/baseline_train.py:baseline训练文件
+
+/deep-lawyer/full_build_data.py:由去燥分词后数据集生成模型输入数据
+/deep-lawyer/tools.py:读文件
+
+/deep-lawyer/data/tongji.py:由原始数据集生成分词去燥后的数据集
+/deep-lawyer/data/view.py:由词对源文件生成模型输入数据
+/deep-lawyer/data/new_dic.py:生成新词典（词频>=25)
+
+
+
+
+Big:
+Total:
+1588894 
+Train：
+1111939 
+true_test:
+476955
+
+
+
+大数据集：
+wordlist: 
+true_train: 1588894 
+true_test: 185228
+Law number: 118
+Accu number: 130
+Term number : 11
+其余：等于liu
+
+数据文件位置、含义：
+词对：
+/deep-lawyer/data/generated/new_data_test/train_pair_front/last_:
+word: 是单词非数字（是为1，否为0）
+Num:数字序列序号
+id: 单词序号
+dig:是数字非单词
+输入:
+/deep-lawyer/data/generated/new_data_test/train_cuted_:
+singlefact: 全文单词序列，n*512
+fact: 全文分层单词序列， n*64*64
+输出标签：
+/deep-lawyer/data/generated/new_data_test/train_cuted_:
+time:刑期时间
+term:刑期种类
+law:推荐法律
+accu：所犯罪名
+原始数据：
+法律目录：/deep-lawyer/data/big_law.txt
+罪名目录：/deep-lawyer/data/big_accu.txt
+单词编号字典：/deep-lawyer/data/new_word2id.json
+原始训练集：/deep-lawyer/data/basic/big_data_train.json
+原始测试集：/deep-lawyer/data/basic/big_data_test.json
+
+去燥分词后训练集：/deep-lawyer/data/basic/new_bigdata_train_cuted.json
+去燥分词后测试机：/deep-lawyer/data/basic/new_bigdata_test_cuted.json
+去燥原始词对训练集：/deep-lawyer/data/new_bigdata_train_pair.json
+去燥原始词对测试集：/deep-lawyer/data/new_bigdata_test_pair.json
+
+程序位置：
+/deep-lawyer/selfmodels.py:调试模型文件
+/deep-lawyer/train.py:调试训练文件
+/deep-lawyer/final_model.py:最终模型文件
+/deep-lawyer/final_train.py:最终训练文件
+/deep-lawyer/big_baseline.py:baseline训练文件
+
+/deep-lawyer/full_build_dbigata.py:由去燥分词后数据集生成模型输入数据
+/deep-lawyer/tools.py:读文件
+
+/deep-lawyer/data/tongji.py:由原始数据集生成分词去燥后的数据集
+/deep-lawyer/data/bigdata_pairview.py:由词对源文件生成模型输入数据
+/deep-lawyer/data/new_dic.py:生成新词典（词频>=25)
