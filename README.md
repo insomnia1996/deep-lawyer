@@ -11,6 +11,8 @@ Source code and data description of Legal Judgment Prediction via Multi-Perspect
 All code uploaded contains data_processing and model_training, but does not contain any visualizing tool or baseline code.
 Probably we will give a specific usage of deep-lawyer code in future update.
 
+Add a brief data processing code description. See /meta/数据描述_服务器.txt.
+
 
 #### Reference:
 [Legal Judgment Prediction via Multi-Perspective Bi-Feedback Network](https://arxiv.org/abs/1905.03969)
