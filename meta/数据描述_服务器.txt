@@ -57,6 +57,8 @@ accu：所犯罪名
 /deep-lawyer/data/tongji.py:由原始数据集生成分词去燥后的数据集
 /deep-lawyer/data/view.py:由词对源文件生成模型输入数据
 /deep-lawyer/data/new_dic.py:生成新词典（词频>=25)
+/deep-lawyer/meta/dependenci.py:生成词对关系文件
+/deep-lawyer/meta/123.py:处理词对关系
 
 
 
